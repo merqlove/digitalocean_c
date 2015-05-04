@@ -1,4 +1,4 @@
-# Digitalocean Rubygem
+# Digitalocean Rubygem with Updated Faraday version
 
 ![](https://raw.github.com/scottmotte/digitalocean/master/digitalocean-rubygem.jpg)
 
@@ -28,7 +28,7 @@ result.droplets.first.ip_address
 Add this line to your application's Gemfile:
 
 ```
-gem 'digitalocean'
+gem 'digitalocean_c'
 ```
 
 And then execute:
@@ -40,7 +40,7 @@ bundle
 Or install it yourself as:
 
 ```
-gem install digitalocean
+gem install digitalocean_c
 ```
 
 Then in your application initialize the gem:
