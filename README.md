@@ -1,4 +1,4 @@
-# Digitalocean Rubygem with Updated Faraday version
+# DigitaloceanC Rubygem with Updated Faraday version
 
 ![](https://raw.github.com/scottmotte/digitalocean/master/digitalocean-rubygem.jpg)
 
