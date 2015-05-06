@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Record do
+describe DigitaloceanC::Record do
   subject(:record) { described_class }
 
   describe "._all" do

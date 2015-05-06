@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::SshKey do
+describe DigitaloceanC::SshKey do
   subject(:ssh_key) { described_class }
 
   describe "._all" do

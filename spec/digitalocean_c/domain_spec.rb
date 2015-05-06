@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Domain do
+describe DigitaloceanC::Domain do
   subject(:domain) { described_class }
 
   describe "._all" do

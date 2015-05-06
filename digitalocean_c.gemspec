@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'digitalocean/version'
+require 'digitalocean_c/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "digitalocean_c"
-  gem.version       = Digitalocean::VERSION
+  gem.version       = DigitaloceanC::VERSION
   gem.authors       = ["scottmotte", "sergiocampama"]
   gem.email         = ["scott@scottmotte.com", "sergiocampama@gmail.com"]
   gem.description   = %q{Ruby bindings for the Digital Ocean API.}

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Droplet do
+describe DigitaloceanC::Droplet do
   subject(:droplet) { described_class }
 
   describe "._all" do

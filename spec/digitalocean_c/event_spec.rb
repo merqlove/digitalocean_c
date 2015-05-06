@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Event do
+describe DigitaloceanC::Event do
   subject(:event) { described_class }
 
   describe "._find" do

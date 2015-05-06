@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Size do
+describe DigitaloceanC::Size do
   subject(:size) { described_class }
 
   describe "._all" do

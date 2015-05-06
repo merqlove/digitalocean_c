@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'pry'
-require 'digitalocean'
+require 'digitalocean_c'
 require 'securerandom'
 require 'rspec/its'
 

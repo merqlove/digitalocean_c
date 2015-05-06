@@ -1,9 +1,9 @@
 require "faraday"
 require "faraday_middleware"
 require "recursive-open-struct"
-require "digitalocean/version"
+require "digitalocean_c/version"
 
-module Digitalocean
+module DigitaloceanC
   extend self
 
   DEFINITIONS     = {
@@ -74,19 +74,19 @@ module Digitalocean
         post_query    = parts[1]
 
         singleton.send :define_method, "_#{method_name}" do |*args|
-          pre_query_for_method   = Digitalocean.process_standard_args_from_part(pre_query, args)
-          post_query_for_method  = Digitalocean.process_hash_args_from_part(post_query, args)
+          pre_query_for_method   = DigitaloceanC.process_standard_args_from_part(pre_query, args)
+          post_query_for_method  = DigitaloceanC.process_hash_args_from_part(post_query, args)
 
           [pre_query_for_method, post_query_for_method].join("?")
         end
 
         singleton.send :define_method, method_name do |*args|
-          Digitalocean.request_and_respond send("_#{method_name}", *args)
+          DigitaloceanC.request_and_respond send("_#{method_name}", *args)
         end
       end
     end
 
-    Digitalocean.const_set(resource_name, resource_class)
+    DigitaloceanC.const_set(resource_name, resource_class)
   end
 
   def request=(request)
@@ -138,7 +138,7 @@ module Digitalocean
   end
 
   def request_and_respond(url)
-    resp = Digitalocean.request.get url
+    resp = DigitaloceanC.request.get url
     hash = RecursiveOpenStruct.new(resp.body, :recurse_over_arrays => true)
 
     hash
@@ -207,7 +207,7 @@ module Digitalocean
       :ssl      =>  {:verify => verify_ssl}
     }
 
-    Digitalocean.request = ::Faraday::Connection.new(options) do |builder|
+    DigitaloceanC.request = ::Faraday::Connection.new(options) do |builder|
       builder.use     ::Faraday::Request::UrlEncoded
       builder.use     ::FaradayMiddleware::ParseJson
       builder.use     ::FaradayMiddleware::FollowRedirects

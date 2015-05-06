@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe "integrations" do
-  subject(:region) { Digitalocean::Region }
+  subject(:region) { DigitaloceanC::Region }
 
-  before { Digitalocean.send(:setup_request!) }
+  before { DigitaloceanC.send(:setup_request!) }
 
   it "makes a real call" do
     regions = region.all

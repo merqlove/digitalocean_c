@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean do
+describe DigitaloceanC do
   subject(:digitalocean) { described_class }
 
   before do

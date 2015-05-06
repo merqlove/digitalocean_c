@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Digitalocean::Region do
+describe DigitaloceanC::Region do
   subject(:region) { described_class }
 
   describe "._all" do
