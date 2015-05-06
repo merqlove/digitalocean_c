@@ -19,7 +19,7 @@ describe DigitaloceanC do
     its(:api_key)      { should eq "api_key_required" }
     its(:verify_ssl)   { should eq true }
 
-    it { digitalocean::VERSION.should eq "1.2.0" }
+    it { digitalocean::VERSION.should eq "1.2.1" }
   end
 
   describe "setting values" do
